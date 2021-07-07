@@ -1,30 +1,39 @@
 <html>
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Calendar</title>
 </head>
+
 <body>
-
-
+  <h1>Social Calendar</h1>
+  <div class="message-container"></div>
 </body>
+<form id="form">
+  <label>Message: <input type="text" id="message"></label>
+  <label>Created By: <input type="text" id="created_by"></label>
+  <br><br>
+  <button type="submit">Submit form</button>
+</form>
+<p id="log"></p>
 <script src="./node_modules/expect/umd/expect.min.js"></script>
 <script src="./node_modules/mocha/mocha.js"></script>
 <script src="./test/polyfill.js"></script>
-<script src='./client/main.js'></script>
-
+<script src="./client/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 <script>
   // If called from Mocha Phantom-JS on the command line then add the test scripts
   // to the end of the document.
   if (window.callPhantom) {
-    mocha.setup('bdd')
-    addScript('./test/online-calendar-test.js');
-    addScript('./test/online-chatroom-test.js');
-    addScript('./test/runMocha.js');
+    mocha.setup("bdd");
+    addScript("./test/online-calendar-test.js");
+    addScript("./test/online-chatroom-test.js");
+    addScript("./test/runMocha.js");
   }
-  
+
   function addScript(path) {
-    var js = document.createElement('script');
-    js.type = 'text/javascript';
+    var js = document.createElement("script");
+    js.type = "text/javascript";
     js.src = path;
     document.body.appendChild(js);
   }
