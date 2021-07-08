@@ -3,11 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <title>Calendar</title>
+  <link rel="stylesheet" href="client/grid-test.css" />
+
 </head>
 
 <body>
   <h1>Social Calendar</h1>
-  <div class="message-container"></div>
+  <div class="calendar">
+    <header>
+      <h1>Social calendar</h1>
+    </header>
+    <ul class="weekdays">
+      <li>Monday</li>
+      <li>Tuesday</li>
+      <li>Wednesday</li>
+      <li>Thursday</li>
+      <li>Friday</li>
+      <li>Saturday</li>
+      <li>Sunday</li>
+    </ul>
+    <ol class="day-grid">
+      <li>
+        <div class="day">
+        </div>
+      </li>
+      <li>
+        <div class="day">
+        </div>
+      </li>
+      <li>
+        <div class="day">
+        </div>
+      </li>
+    </ol>
+
+    <div class="message-container"></div>
 </body>
 <form id="form">
   <label>Message: <input type="text" id="message"></label>

@@ -1,0 +1,73 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(27, 27, 27);
+    }
+    header {
+    display: flex;
+    align-items: center;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    justify-content: center;
+    margin-bottom: 2em;
+    background: #000;
+    color: #fff;
+    min-height: 10vh;
+    text-align: center;
+    }
+    ul, ol {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+    margin: 0 auto;
+    /*max-width: 64em;*/
+    padding: 10px 20px;
+    }
+    li {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    }
+    /* ul.weekdays {
+    margin-bottom: 1em;
+    }
+    */
+    ul.weekdays li {
+    height: 4vw;
+    }
+    ol.day-grid li {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    min-height: 12vw;
+    padding: 20px;
+    font-size: calc(11px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    }
+    ul.weekdays {
+    border: none;
+    font-weight: 800;
+    text-decoration: none;
+    }
+    .day{
+    font-weight: bold;
+    }
+    .no-events {
+    color:rgb(99, 99, 99);
+    font-size: smaller;
+    }
+    @media all and (max-width: 800px) {
+    ul, ol {
+    grid-gap: .25em;
+    }
+    ul.weekdays li {
+    font-size: 0;
+    }
+    ul.weekdays > li abbr:after {
+    content: attr(title);
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    }
+    }
